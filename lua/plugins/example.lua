@@ -57,7 +57,9 @@ return {
       -- stylua: ignore
       {
         "<leader>fp",
-        function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root }) end,
+        function()
+          require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root })
+        end,
         desc = "Find Plugin File",
       },
     },
@@ -250,7 +252,10 @@ return {
           else
             fallback()
           end
-        end, { "i", "s" }),
+        end, {
+          "i",
+          "s",
+        }),
         ["<S-Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_prev_item()
@@ -259,7 +264,10 @@ return {
           else
             fallback()
           end
-        end, { "i", "s" }),
+        end, {
+          "i",
+          "s",
+        }),
       })
     end,
   },
