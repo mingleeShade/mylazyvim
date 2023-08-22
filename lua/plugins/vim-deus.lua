@@ -1,0 +1,3 @@
+return {
+    "theniceboy/vim-deus",
+}
