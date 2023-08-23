@@ -5,3 +5,5 @@ local opt = vim.opt
 
 opt.tabstop = 4
 opt.shiftwidth = 4
+opt.foldmethod = "manual"
+opt.undofile = true
