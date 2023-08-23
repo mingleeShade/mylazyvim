@@ -1,3 +1,3 @@
 return {
-  {"echasnovski/mini.comment", enable = false},
+  { "echasnovski/mini.comment", enabled = false },
 }
