@@ -8,3 +8,5 @@ opt.shiftwidth = 4
 opt.foldmethod = "manual"
 opt.undofile = false
 opt.swapfile = false
+-- 通用的通过 lua 设置 vim 属性的命令
+-- vim.cmd 'se noswf'
