@@ -7,19 +7,32 @@ end
 
 -- 定义一个函数来设置文件类型的缩进选项
 local function set_indent_options()
-  local filetype = vim.api.nvim_buf_get_option(0, "filetype")
+  local opts = {}
+  -- opts["scope"] = "local"
+  opts["buf"] = 0
+  local filetype = vim.api.nvim_get_option_value("filetype", opts)
 
   -- 根据不同的文件类型设置缩进选项
   if filetype == "python" then
-    vim.api.nvim_buf_set_option(0, "tabstop", 4)
-    vim.api.nvim_buf_set_option(0, "shiftwidth", 4)
+    vim.api.nvim_set_option_value("tabstop", 4, opts)
+    vim.api.nvim_set_option_value("shiftwidth", 4, opts)
   elseif filetype == "lua" then
-    vim.api.nvim_buf_set_option(0, "tabstop", 2)
-    vim.api.nvim_buf_set_option(0, "shiftwidth", 2)
+    local Util = require("lazyvim.util")
+    local root_path = Util.get_root()
+    if vim.fn.filereadable(vim.fn.expand(root_path .. "/stylua.toml")) == 1 then
+      vim.api.nvim_set_option_value("tabstop", 2, opts)
+      vim.api.nvim_set_option_value("shiftwidth", 2, opts)
+    else
+      vim.api.nvim_set_option_value("tabstop", 4, opts)
+      vim.api.nvim_set_option_value("shiftwidth", 4, opts)
+    end
+  elseif filetype == "html" then
+    vim.api.nvim_set_option_value("tabstop", 2, opts)
+    vim.api.nvim_set_option_value("shiftwidth", 2, opts)
   else
     -- 默认的缩进选项
-    vim.api.nvim_buf_set_option(0, "tabstop", 4)
-    vim.api.nvim_buf_set_option(0, "shiftwidth", 4)
+    vim.api.nvim_set_option_value("tabstop", 4, opts)
+    vim.api.nvim_set_option_value("shiftwidth", 4, opts)
   end
 end
 
@@ -29,7 +42,23 @@ vim.api.nvim_create_autocmd("BufEnter", {
   pattern = {
     "*",
   },
-  callback = function(event)
+  callback = function(_)
     set_indent_options()
   end,
+})
+
+-- formatter
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = augroup("formatter"),
+  pattern = {
+    "*.cpp",
+    "*.html",
+    "*.css",
+    "*.js",
+    "*.py",
+    "*.md",
+  },
+  callback = function (_)
+    vim.cmd("FormatWrite")
+  end
 })
