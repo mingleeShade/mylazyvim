@@ -15,3 +15,14 @@ opt.swapfile = false
 vim.g.oscyank_max_length = 1000000
 vim.g.oscyank_term = 'tmux'
 vim.g.oscyank_silent = true
+
+-- any-jump
+-- let g:any_jump_ignored_files = ['*.tmp', '*.temp', '*.i', '*.log', 'doc/*']
+-- let g:any_jump_window_width_ratio  = 0.9
+-- let g:any_jump_window_height_ratio = 0.9
+-- let g:any_jump_window_top_offset   = 1
+
+vim.g.any_jump_ignored_files = {'*.tmp', '*.temp', '*.i', '*.log', 'doc/*'}
+vim.g.any_jump_window_width_ratio  = 0.9
+vim.g.any_jump_window_height_ratio = 0.9
+vim.g.any_jump_window_top_offset   = 1
