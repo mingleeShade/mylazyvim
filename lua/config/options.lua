@@ -10,3 +10,8 @@ opt.undofile = false
 opt.swapfile = false
 -- 通用的通过 lua 设置 vim 属性的命令
 -- vim.cmd 'se noswf'
+
+-- vim-oscyank
+vim.g.oscyank_max_length = 1000000
+vim.g.oscyank_term = 'tmux'
+vim.g.oscyank_silent = true

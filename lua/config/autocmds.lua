@@ -58,7 +58,20 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     "*.py",
     "*.md",
   },
-  callback = function (_)
+  callback = function(_)
     vim.cmd("FormatWrite")
+  end
+})
+
+-- vim-oscyank
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = augroup("oscyank"),
+  pattern = {
+    "*",
+  },
+  callback = function(_)
+    if vim.v.event.operator == 'y' and vim.v.event.regname == '' then
+      vim.cmd('OSCYankReg "')
+    end
   end
 })
