@@ -14,7 +14,14 @@ return {
     end,
     opts = {
       -- Close autoformat, use formatter.nvim to format
-      autoformat = false
+      autoformat = false,
+      servers = {
+        clangd = {
+          root_dir = function(fname)
+            return require("lspconfig.util").find_git_ancestor(fname)
+          end
+        }
+      }
     }
   }
 }
