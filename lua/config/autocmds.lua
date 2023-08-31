@@ -48,7 +48,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 -- formatter
-vim.api.nvim_create_autocmd("BufWritePre", {
+vim.api.nvim_create_autocmd("BufWritePost", {
   group = augroup("formatter"),
   pattern = {
     "*.cpp",
