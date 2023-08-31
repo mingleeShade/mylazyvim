@@ -22,5 +22,8 @@ map("i", "<C-j>", "<Down>", {desc = "Cursor move down"})
 map("i", "<C-k>", "<Up>", {desc = "Cursor move up"})
 map("i", "<C-l>", "<Right>", {desc = "Cursor move right"})
 
--- Format keymap
+-- Format keymap 改为直接替换 lsp 的format keymap
 -- map("n", "<leader>cF", ":Format<CR>", {desc = "Format"})
+
+-- vim-fugitive
+map("n", "<leader>gb", "<cmd>Git blame<cr>", {desc = "Git blame"})
