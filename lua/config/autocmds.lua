@@ -2,7 +2,7 @@
 -- Default autocmds that are always set: https://github.com/Lazyvim/Lazyvim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 local function augroup(name)
-  return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
+  return vim.api.nvim_create_augroup("lazyvim_" .. name, {clear = true})
 end
 
 -- 定义一个函数来设置文件类型的缩进选项
@@ -39,12 +39,10 @@ end
 -- 在 BufEnter 事件中调用函数设置缩进选项
 vim.api.nvim_create_autocmd("BufEnter", {
   group = augroup("indent"),
-  pattern = {
-    "*",
-  },
+  pattern = {"*"},
   callback = function(_)
     set_indent_options()
-  end,
+  end
 })
 
 -- formatter
@@ -66,9 +64,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 -- vim-oscyank
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = augroup("oscyank"),
-  pattern = {
-    "*",
-  },
+  pattern = {"*"},
   callback = function(_)
     if vim.v.event.operator == 'y' and vim.v.event.regname == '' then
       vim.cmd('OSCYankReg "')
