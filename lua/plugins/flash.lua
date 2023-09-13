@@ -6,8 +6,15 @@ return {
     ---@type Flash.Config
     opts = {
       label = {
-        style = "eol",
+        style = "inline",
+        after = false,
+        before = true
       },
+      modes = {
+        search = {
+          enabled = false,
+        }
+      }
     },
     -- stylua: ignore
     keys = {
