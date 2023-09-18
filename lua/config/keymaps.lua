@@ -27,3 +27,16 @@ map("i", "<C-l>", "<Right>", {desc = "Cursor move right"})
 
 -- vim-fugitive
 map("n", "<leader>gb", "<cmd>Git blame<cr>", {desc = "Git blame"})
+
+-- vim-translator
+-- Echo translation in the cmdline
+-- map("n", "<leader>tt", "<Plug>Translate", {desc = "Translate (cmdline)", silent = true})
+-- map("v", "<leader>tt", "<Plug>TranslateV", {desc = "Translate (cmdline)", silent = true})
+-- -- Display translation in a window
+-- map("n", "<leader>tw", "<Plug>TranslateW", {desc = "Translate (window)", silent = true})
+-- map("v", "<leader>tw", "<Plug>TranslateWV", {desc = "Translate (window)", silent = true})
+-- -- Replace the text with translation
+-- map("n", "<leader>tr", "<Plug>TranslateR", {desc = "Translate and replace", silent = true})
+-- map("v", "<leader>tr", "<Plug>TranslateRV", {desc = "Translate and replace", silent = true})
+-- -- Translate the text in clipboard
+-- map("n", "<leader>tx", "<Plug>TranslateX", {desc = "Translate in clipboard", silent = true})
