@@ -10,6 +10,13 @@ return {
     dependencies = { 'kkharji/sqlite.lua', },
     opts = {
       frontend = {
+        default = {
+          title = vim.fn.has 'nvim-0.9' == 1 and {
+            {'',         'TransTitleRound'},
+            {'󰊿 Trans',   'TransTitle'},
+            {'',         'TransTitleRound'},
+          },
+        },
         hover = {
           keymaps = {
             pageup = '<C-u>',
