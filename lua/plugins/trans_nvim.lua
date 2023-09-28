@@ -1,5 +1,6 @@
 return {
   {
+    -- 可以主动使用 lua require('Trans').install() 来主动下载
     "JuanZoran/Trans.nvim",
     build = function () require'Trans'.install() end,
     keys = {
