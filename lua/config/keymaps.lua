@@ -28,6 +28,9 @@ map("i", "<C-l>", "<Right>", {desc = "Cursor move right"})
 -- vim-fugitive
 map("n", "<leader>gb", "<cmd>Git blame<cr>", {desc = "Git blame"})
 
+-- nvim-blame-line
+map("n", "<leader>gB", "<cmd>ToggleBlameLine<CR>", {desc = "Toggle blame line"})
+
 -- vim-translator
 -- Echo translation in the cmdline
 -- map("n", "<leader>tt", "<Plug>Translate", {desc = "Translate (cmdline)", silent = true})
