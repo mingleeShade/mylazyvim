@@ -1,5 +1,8 @@
 return {
   {
+    -- 可以主动使用 lua require('Trans').install() 来主动下载
+    -- 安装 fstival：`sudo apt-get install festival festvox-kallpc16k`
+    -- 安装 sqlite3：`sudo apt-get install sqlite3 libsqlite3-dev`
     "JuanZoran/Trans.nvim",
     build = function () require'Trans'.install() end,
     keys = {
