@@ -49,6 +49,10 @@ vim.api.nvim_create_autocmd("BufEnter", {
 vim.api.nvim_create_autocmd("BufWritePost", {
   group = augroup("formatter"),
   pattern = {
+    "*.h",
+    "*.hpp",
+    "*.c",
+    "*.cc",
     "*.cpp",
     "*.html",
     "*.css",
