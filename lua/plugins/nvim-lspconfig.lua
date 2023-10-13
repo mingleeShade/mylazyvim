@@ -19,7 +19,15 @@ return {
         clangd = {
           root_dir = function(fname)
             return require("lspconfig.util").find_git_ancestor(fname)
-          end
+          end,
+          cmd = {
+            "clangd",
+            "--background-index",
+            "--clang-tidy",
+            "--header-insertion=iwyu",
+            "--completion-style=detailed",
+            "--function-arg-placeholders",
+          },
         },
         pyright = {},
         ruff_lsp = {},
