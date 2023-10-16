@@ -77,10 +77,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- nvim-blame-line
-vim.api.nvim_create_autocmd("BufEnter", {
-  group = augroup("nvim-blame-line"),
-  pattern = {"*"},
-  callback = function(_)
-    vim.cmd("EnableBlameLine")
-  end
-})
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--   group = augroup("nvim-blame-line"),
+--   pattern = {"*"},
+--   callback = function(_)
+--     vim.cmd("EnableBlameLine")
+--   end
+-- })
