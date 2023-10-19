@@ -20,6 +20,7 @@ return {
           root_dir = function(fname)
             return require("lspconfig.util").find_git_ancestor(fname)
           end,
+          filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
           cmd = {
             "clangd",
             "--background-index",
