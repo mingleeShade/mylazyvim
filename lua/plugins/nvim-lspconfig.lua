@@ -28,6 +28,7 @@ return {
             "--header-insertion=iwyu",
             "--completion-style=detailed",
             "--function-arg-placeholders",
+            "-j=4"
           },
         },
         pyright = {},
