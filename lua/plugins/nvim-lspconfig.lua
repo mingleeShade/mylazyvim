@@ -14,7 +14,7 @@ return {
     end,
     opts = {
       -- Close autoformat, use formatter.nvim to format
-      autoformat = false,
+      -- autoformat = false, -- `nvim-lspconfig.opts.autoformat` is deprecated. Please use `vim.g.autoformat` instead
       servers = {
         clangd = {
           root_dir = function(fname)
@@ -36,7 +36,7 @@ return {
       },
       setup = {
         ruff_lsp = function()
-          require("lazyvim.util").on_attach(function(client, _)
+          require("lazyvim.util").lsp.on_attach(function(client, _)
             if client.name == "ruff_lsp" then
               -- Disable hover in favor of Pyright
               client.server_capabilities.hoverProvider = false

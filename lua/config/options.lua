@@ -1,7 +1,9 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/Lazyvim/Lazyvim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
+
 local opt = vim.opt
+
 
 opt.tabstop = 4
 opt.shiftwidth = 4
@@ -31,3 +33,7 @@ vim.g.any_jump_window_top_offset   = 1
 -- vim-translator
 -- vim.g.translator_default_engines = {'bing', 'haici'}
 -- vim.g.translator_window_type = 'preview'
+
+vim.g.autoformat = false
+-- 默认 leader 键改成空格
+vim.g.maplocalleader = " "

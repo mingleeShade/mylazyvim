@@ -18,7 +18,7 @@ local function set_indent_options()
     vim.api.nvim_set_option_value("shiftwidth", 4, opts)
   elseif filetype == "lua" then
     local Util = require("lazyvim.util")
-    local root_path = Util.get_root()
+    local root_path = Util.root.get()
     if vim.fn.filereadable(vim.fn.expand(root_path .. "/stylua.toml")) == 1 then
       vim.api.nvim_set_option_value("tabstop", 2, opts)
       vim.api.nvim_set_option_value("shiftwidth", 2, opts)
