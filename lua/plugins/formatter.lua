@@ -74,7 +74,7 @@ return {
           -- require("formatter.filetypes.cpp").clangformat,
           function()
             local Util = require("lazyvim.util")
-            local root_path = Util.get_root()
+            local root_path = Util.root.get()
             -- print(vim.fn.filereadable(vim.fn.expand(root_path .. "/.astylerc")))
             if vim.fn.filereadable(vim.fn.expand(root_path .. "/.astylerc")) == 1 then
               return {exe = "astyle", args = {"--options=" .. root_path .. "/.astylerc"}, stdin = true}
