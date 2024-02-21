@@ -28,11 +28,17 @@ return {
             "--header-insertion=iwyu",
             "--completion-style=detailed",
             "--function-arg-placeholders",
-            "-j=4"
           },
         },
         pyright = {},
         ruff_lsp = {},
+        gopls = {
+          settings = {
+            gopls = {
+              staticcheck = false,
+            },
+          },
+        },
       },
       setup = {
         ruff_lsp = function()
