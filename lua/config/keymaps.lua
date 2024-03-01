@@ -22,6 +22,10 @@ map("i", "<C-j>", "<Down>", {desc = "Cursor move down"})
 map("i", "<C-k>", "<Up>", {desc = "Cursor move up"})
 map("i", "<C-l>", "<Right>", {desc = "Cursor move right"})
 
+-- DF for esc
+map("i", "df", "<ESC>", {desc = "df replace ESC"})
+map("v", "df", "<ESC>", {desc = "df replace ESC"})
+
 -- Format keymap 改为直接替换 lsp 的format keymap
 -- map("n", "<leader>cF", ":Format<CR>", {desc = "Format"})
 
