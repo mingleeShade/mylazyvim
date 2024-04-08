@@ -59,6 +59,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
     "*.js",
     "*.py",
     "*.md",
+    "*.go",
   },
   callback = function(_)
     vim.cmd("FormatWrite")

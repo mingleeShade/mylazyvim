@@ -8,7 +8,9 @@ return {
         "json-lsp",
         "luaformatter",
         "prettierd",
-        "shfmt"
+        "shfmt",
+        "goimports",
+        "golines"
       }
     }
   }

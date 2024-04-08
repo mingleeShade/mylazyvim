@@ -36,6 +36,7 @@ return {
           settings = {
             gopls = {
               staticcheck = false,
+              gofumpt = false,
             },
           },
         },

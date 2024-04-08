@@ -1,5 +1,6 @@
 return {
   {
+    -- 增加 format 语言，需要同时修改 autocmds.lua。增加保存时触发
     "mhartington/formatter.nvim",
     opts = {
       -- Utilities for creating configurations
@@ -68,6 +69,11 @@ return {
         python = {
           function()
             return require("formatter.filetypes.python").black()
+          end
+        },
+        go = {
+          function()
+            return require("formatter.filetypes.go").goimports()
           end
         },
         cpp = {

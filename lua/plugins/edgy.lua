@@ -78,9 +78,10 @@ return {
           --   open = "Neotree position=top buffers",
           -- },
           {
+            title = "Outline",
             ft = "Outline",
             pinned = true,
-            open = "SymbolsOutline",
+            open = "Outline",
           },
           "neo-tree",
         },
