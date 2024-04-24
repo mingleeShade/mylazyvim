@@ -7,6 +7,7 @@ return {
         "cpptools",
         "json-lsp",
         "luaformatter",
+        "prettier",
         "prettierd",
         "shfmt",
         "goimports",

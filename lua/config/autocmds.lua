@@ -29,6 +29,9 @@ local function set_indent_options()
   elseif filetype == "html" then
     vim.api.nvim_set_option_value("tabstop", 2, opts)
     vim.api.nvim_set_option_value("shiftwidth", 2, opts)
+  elseif filetype == "yaml" then
+    vim.api.nvim_set_option_value("tabstop", 2, opts)
+    vim.api.nvim_set_option_value("shiftwidth", 2, opts)
   else
     -- 默认的缩进选项
     vim.api.nvim_set_option_value("tabstop", 4, opts)
@@ -60,6 +63,8 @@ vim.api.nvim_create_autocmd("BufWritePost", {
     "*.py",
     "*.md",
     "*.go",
+    "*.yaml",
+    "*.yml",
   },
   callback = function(_)
     vim.cmd("FormatWrite")
