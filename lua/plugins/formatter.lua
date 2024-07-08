@@ -76,6 +76,11 @@ return {
             return require("formatter.filetypes.go").goimports()
           end
         },
+        json = {
+          function()
+            return require("formatter.filetypes.json").prettier()
+          end
+        },
         yaml = {
           function()
             local util = require("formatter.util")
