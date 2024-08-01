@@ -11,6 +11,7 @@ return {
         "prettierd",
         "shfmt",
         "goimports",
+        "black",
         "golines"
       }
     }
