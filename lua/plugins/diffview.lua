@@ -2,8 +2,12 @@ return {
   {
     "sindrets/diffview.nvim",
     opts = {
-      merge_tool = {
-        layout = "diff4_mixed"
+      view = {
+        merge_tool = {
+          layout = "diff4_mixed",
+          disable_diagnostics = true,   -- Temporarily disable diagnostics for diff buffers while in the view.
+          winbar_info = true,
+        }
       }
     }
   }
