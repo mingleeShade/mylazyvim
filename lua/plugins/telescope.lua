@@ -12,6 +12,13 @@ return {
         end,
         desc = "Find Plugin File",
       },
+      {
+        "<leader>sf",
+        function()
+          require("telescope.builtin").find_files({ cwd = "~/go/pkg/mod/"})
+        end,
+        desc = "Find Mod Files"
+      },
     },
     -- change some options
     opts = {
